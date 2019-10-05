@@ -1,0 +1,6 @@
+
+#Redis
+#Gitlab CE uses Redis to store user sessions and a task queue. In production, you would want it to be a bit more resilient than we show here, but for the most part, the data stored in Redis is not critical, so we’re opting to not persist any data for it for this demo. So its entry in our docker-compose manifest is fairly simple: 
+redis:
+  restart: always
+  image: redis:3.0.7-alpine
