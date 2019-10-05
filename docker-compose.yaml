@@ -39,6 +39,8 @@ postgresql:
     - POSTGRES_USER=gitlab
     - POSTGRES_PASSWORD=gitlab
     - POSTGRES_DB=gitlabhq_production
+  ports:
+    - "5432:5432"
 # the following are hints on what volumes to mount if you want to persist data
   volumes:
     - /opt/postgresql/data/postgresql:/var/lib/postgresql:rw
